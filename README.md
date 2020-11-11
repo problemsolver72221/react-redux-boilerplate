@@ -1,2 +1,3 @@
-# pern-stack-boilerplate
-A boilerplate for PERN stack
+# react-redux-boilerplate
+
+A modular boilerplate for React & Redux
