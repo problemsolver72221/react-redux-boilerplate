@@ -1,0 +1,49 @@
+.modal-wrapper {
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    bottom: 0px;
+    right: 0px;
+    background-color: rgba(0, 0, 0, 0.7);
+    z-index: 14;
+    overflow: hidden;
+    width: 100vw;
+}
+
+.modal-inner-wrapper {
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background-color: transparent;
+    z-index: 15;
+    border-radius: 5;
+    display: flex;
+    justify-content: center;
+}
+
+.modal-content-wrapper {
+    width: 100%;
+    height: calc(100% - 50px);
+    margin-top: 50px;
+    overflow-x: hidden;
+    overflow-y: auto;
+}
+
+@media (min-width: 992px) {
+    .modal-inner-wrapper {
+        position: fixed;
+        top: 50px;
+        bottom: 50px;
+        margin-left: auto;
+        margin-right: auto;
+        width: 535px;
+        max-width: 535px;
+        background-color: transparent;
+        z-index: 15;
+        border-radius: 5;
+        display: flex;
+        justify-content: center;
+    }
+}

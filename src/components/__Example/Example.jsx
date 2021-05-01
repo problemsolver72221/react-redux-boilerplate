@@ -4,11 +4,13 @@ import PropTypes from 'prop-types'
 import getStyles from './Example.style'
 const styles = getStyles()
 
-const Example = ({ title }) => (
-    <div style={styles.wrapper}>
-        <p>{title} + hi</p>
-    </div>
-)
+const Example = ({ title }) => {
+    return (
+        <div style={styles.wrapper}>
+            <p>{title}</p>
+        </div>
+    )
+}
 
 Example.propTypes = {
     title: PropTypes.string,

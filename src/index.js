@@ -15,7 +15,7 @@ import { Router } from 'react-router-dom'
 import * as serviceWorker from './serviceWorker'
 import App from './App'
 import { createState } from './app.state'
-import './index.css'
+import './styles'
 
 /**
  * It's likely that the server will provide the production `initialState``

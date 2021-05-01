@@ -1,7 +1,7 @@
 ### Example styleguide component
 
 ```js
-    <Example
-        title={'Welcome there'}
-    />
+<Example
+    title={'Hello world'}
+/>
 ```

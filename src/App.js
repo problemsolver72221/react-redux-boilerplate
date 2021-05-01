@@ -25,9 +25,7 @@ import { connect } from 'react-redux'
 import { Helmet } from 'react-helmet'
 import { Switch, Route } from 'react-router-dom'
 
-// import { StackLayout } from './features/feature-stacklayout'
-
-import { Home } from './pages'
+import { Home } from 'pages'
 
 const mapState = ({ app }) => ({
     name: app.name,
@@ -41,7 +39,6 @@ const App = ({ name }) => (
         <Switch>
             <Route path="/" component={Home} />
         </Switch>
-        {/* <StackLayout /> */}
     </>
 )
 

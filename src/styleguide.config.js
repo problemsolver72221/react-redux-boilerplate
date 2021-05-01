@@ -1,5 +1,10 @@
 const path = require('path')
 
+// Inject craco config:
+const { createWebpackDevConfig } = require('@craco/craco')
+const cracoConfig = require('../craco.config.js')
+const webpackConfig = createWebpackDevConfig(cracoConfig)
+
 module.exports = {
     /**
      * Include all the (almost) pure component examples here:
@@ -7,19 +12,17 @@ module.exports = {
     sections: [
         {
             name: 'Example',
-            components: ['./components/__Example/Example.jsx'],
+            components: ['components/__Example/Example.jsx'],
         },
         {
-            name: 'Home',
-            components: ['./pages/Home/components/Input/Input.jsx'],
+            name: 'Components',
+            description: 'Application level pure components',
+            components: [
+                'components/Flaticon/Flaticon.jsx',
+                'components/Image/Image.jsx',
+                // 'components/Modal/Modal.jsx',
+            ],
         },
-        // {
-        //     name: 'Components',
-        //     description: 'Application level dumb components',
-        //     components: [
-        //         'src/components/Markdown/Markdown.js',
-        //     ],
-        // },
         // {
         //     name: 'Features',
         //     description: 'Produce examples for each feature',
@@ -27,7 +30,7 @@ module.exports = {
         //         {
         //             name: 'features/locale',
         //             components: [
-        //                 'src/features/locale/LocaleSelectorUI.js',
+        //                 'features/locale/LocaleSelectorUI.js',
         //             ],
         //         },
         //     ],
@@ -59,7 +62,7 @@ module.exports = {
      * You may need to add more of those, but it's likely that you will
      * prefer to go the `styled-components` way.
      */
-    require: [path.join(__dirname, './index.css')],
+    require: [path.join(__dirname, './styles')],
 
     /**
      * CRA provides a fully functioning webpack config that is good for
@@ -75,4 +78,5 @@ module.exports = {
     //     ...require('react-scripts-rewired/config/webpack.config.dev.extend'),
     //     // devServer: { disableHostCheck: true },
     // },
+    webpackConfig,
 }
